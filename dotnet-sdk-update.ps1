@@ -40,7 +40,7 @@ Invoke-WebRequest -Uri $fileLink -OutFile $output
 Write-Host "Done. Starting installation."
 
 # Install the downloaded SDK
-Start-Process -FilePath $output -ArgumentList '/quiet' -Wait
+Start-Process -FilePath $output -ArgumentList '/quiet /norestart' -Wait
 Write-Host "New dotnet SDK version $versionToBeInstalled was succesfully installed."
 
 # Cleanup
